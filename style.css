@@ -92,4 +92,38 @@ header {
         border: none;
         background: none;
     }
+
+    .checkbox-customizada {
+        border: 1px solid var(--border-primary);
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 0.6rem;
+        cursor: pointer;
+    }
+    
+    input {
+        display: none;
+    }
+    
+    div {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+    }
+    
+    label {
+        cursor: pointer;
+    }
+        
+    div:has(input:checked) {
+        .checkbox-customizada {
+            background: var(--color-brand);
+            border-color: var(--color-brand);
+            transition: background .2s ease;
+        }
+    
+    label {
+        text-decoration: line-through;
+    }
+}
 }
